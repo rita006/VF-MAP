@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VELOZES E FURIOSOS MAP</title>
+  <link rel="shortcut icon" href="./imagens/iconVF2.ico">
+
+  <!-- Fontes do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" /></head>
+
+
+<div id="app">
+
+  <header id="header">
+    <img class="logo-icon" src="imagens/logofastfurios.png" alt="Logo Velozes & Furiosos"/>
+    <div class="logo">VELOZES <span>&amp;</span> FURIOSOS MAP</div>
+    <div class="status-dot"></div>
+  </header>
+
+  <!-- ══════════════════════
+       CONTEÚDO DAS PÁGINAS
+  ══════════════════════ -->
+  <main id="content">
+
+    <!-- PÁGINA: INÍCIO -->
+    <div id="page-inicio" class="page active">
+
+      <div class="page-title">NISSAN <span>SKYLINE</span> GT-R R34</div>
+      <div class="page-sub"> MEU CARRO FAVORITO — RITA.TECH </div>
+      <div class="car-stage">
+        <div class="orbit-ring orbit-ring-1"><div class="orbit-dot"></div></div>
+        <div class="orbit-ring orbit-ring-2"></div>
+        <div class="car-glow-floor"></div>
+        <img
+          class="car-hero"
+          src="imagens/skyline.png"
+          alt="Nissan Skyline GT-R R34"
+        />
+      </div>
+
+      <div class="car-info-bar">
+        <div class="info-item">
+          <div class="info-label">ANO</div>
+          <div class="info-value">1999</div>
+        </div>
+        <div class="info-sep"></div>
+        <div class="info-item">
+          <div class="info-label">MOTOR</div>
+          <div class="info-value destaque">RB26DETT</div>
+        </div>
+        <div class="info-sep"></div>
+        <div class="info-item">
+          <div class="info-label">POTÊNCIA</div>
+          <div class="info-value destaque">560 CV</div>
+        </div>
+        <div class="info-sep"></div>
+        <div class="info-item">
+          <div class="info-label">0–100</div>
+          <div class="info-value">3.8s</div>
+        </div>
+        <div class="info-sep"></div>
+        <div class="info-item">
+          <div class="info-label">PILOTO</div>
+          <div class="info-value">BRIAN</div>
+        </div>
+        <div class="info-sep"></div>
+        <div class="info-item">
+          <div class="info-label">TRAÇÃO</div>
+          <div class="info-value">ATTESA AWD</div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- PÁGINA: CARROS -->
+    <div id="page-carros" class="page">
+
+      <div class="section-title">  VEÍCULOS ICÔNICOS DA SAGA</div>
+
+      <div class="carousel-wrap">
+        <button class="arrow-btn small" onclick="mudarCarro(-1)">←</button>
+        <div class="carousel-stage">
+          <div class="carousel-img-wrap">
+            <img id="c-img" class="carousel-img" src="" alt="" />
+          </div>
+          <div class="carousel-nome" id="c-nome">—</div>
+          <div class="carousel-counter" id="c-count">1 / 10</div>
+          <div class="dots" id="c-dots"></div>
+        </div>
+        <button class="arrow-btn small" onclick="mudarCarro(1)">→</button>
+      </div>
+
+      <div class="data-panel">
+        <div class="panel-label">◈ DADOS DO CARRO</div>
+        <div class="specs-grid" id="c-specs"></div>
+        <div class="car-desc" id="c-desc"></div>
+      </div>
+
+    </div>
+
+
+    <!-- PÁGINA: PERSONAGENS -->
+    <div id="page-personagens" class="page">
+
+    <div class="section-title"> PERSONAGENS PRINCIPAIS</div>
+
+      <div class="char-top">
+        <div class="char-photo-wrap">
+          <div class="char-scan-overlay"></div>
+          <img id="p-foto" class="char-photo" src="" alt="" />
+        </div>
+        <div class="char-info">
+          <div class="char-nome" id="p-nome">—</div>
+          <div class="char-ator" id="p-ator">—</div>
+          <div class="char-counter-txt" id="p-count">1 / 8</div>
+          <div class="char-arrows">
+            <button class="arrow-btn small" onclick="mudarChar(-1)">←</button>
+            <button class="arrow-btn small" onclick="mudarChar(1)">→</button>
+          </div>
+          <div class="dots" id="p-dots"></div>
+        </div>
+      </div>
+
+      <div class="data-panel">
+        <div class="panel-label">◈ PERFIL DO AGENTE</div>
+        <div class="char-bio" id="p-bio"></div>
+        <div class="tags" id="p-tags"></div>
+      </div>
+
+    </div>
+
+
+    <!-- PÁGINA: OLHO DE DEUS -->
+    <div id="page-olho" class="page">
+
+      <div class="section-title">◈ GOD'S EYE — SISTEMA DE VIGILÂNCIA GLOBAL</div>
+
+      <!-- Grid principal: 3 colunas -->
+      <div class="hud-grid">
+
+        <!-- COLUNA ESQUERDA — painéis de missão -->
+        <div class="hud-col-esq">
+
+          <div class="hud-panel">
+            <div class="hud-panel-num">01</div>
+            <div class="hud-panel-titulo">MISSÃO ATIVA</div>
+            <div class="hud-panel-texto">Recuperar o God's Eye antes que Jakande o utilize contra civis.</div>
+          </div>
+
+          <div class="hud-panel">
+            <div class="hud-panel-num">02</div>
+            <div class="hud-panel-titulo">LOCALIZAÇÃO</div>
+            <div class="hud-panel-texto">Abu Dhabi — Torre Etihad. Alvo confirmado no 50º andar.</div>
+          </div>
+
+          <div class="hud-panel">
+            <div class="hud-panel-num">03</div>
+            <div class="hud-panel-titulo">EQUIPE</div>
+            <div class="hud-panel-texto">Dom, Brian, Letty, Roman, Tej, Ramsey — todos operacionais.</div>
+          </div>
+
+          <div class="hud-panel">
+            <div class="hud-panel-num">04</div>
+            <div class="hud-panel-titulo">STATUS</div>
+            <div class="hud-panel-texto">God's Eye: <span style="color:var(--verde)">ONLINE</span> — Jakande: <span style="color:var(--vermelho)">NEUTRALIZADO</span></div>
+          </div>
+
+          <div class="hud-panel">
+            <div class="hud-panel-num">05</div>
+            <div class="hud-panel-titulo">PRÓXIMO ALVO</div>
+            <div class="hud-panel-texto">Cipher — localização: desconhecida. Monitoramento ativo.</div>
+          </div>
+
+        </div>
+
+        <!-- COLUNA CENTRO — globo -->
+        <div class="hud-centro">
+          <div class="globo-wrap">
+            <!-- Anéis orbitando ao redor do globo -->
+            <div class="globo-anel anel-1"></div>
+            <div class="globo-anel anel-2"></div>
+            <div class="globo-anel anel-3"></div>
+            <!-- Imagem do globo -->
+            <div class="globo-nucleo">
+              <img src="imagens/globo.png" alt="Globo do Olho de Deus" />
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUNA DIREITA — relógio + dados de rede -->
+        <div class="hud-col-dir">
+
+          <!-- Relógio digital -->
+          <div class="hud-relogio" id="hud-clock">00:00</div>
+
+          <!-- Dados de rede -->
+          <div class="hud-panel">
+            <div class="hud-panel-num">NET</div>
+            <div class="hud-panel-titulo">REDE GLOBAL</div>
+            <div class="hud-panel-texto">
+              Nós ativos: <span style="color:var(--ciano)">2.847</span><br/>
+              Câmeras: <span style="color:var(--ciano)">1.039</span><br/>
+              Satélites: <span style="color:var(--verde)">12 ONLINE</span>
+            </div>
+          </div>
+
+          <div class="hud-panel">
+            <div class="hud-panel-num">SYS</div>
+            <div class="hud-panel-titulo">SISTEMAS</div>
+            <div class="hud-panel-texto">
+              <!-- Barras de sistema -->
+              <div class="bar-wrap" style="margin-bottom:0.5rem">
+                <div class="bar-lbl"><span>CPU</span><span id="b-cpu">78%</span></div>
+                <div class="bar-bg"><div class="bar-fill" id="f-cpu" style="width:78%"></div></div>
+              </div>
+              <div class="bar-wrap" style="margin-bottom:0.5rem">
+                <div class="bar-lbl"><span>SINAL</span><span id="b-sig">94%</span></div>
+                <div class="bar-bg"><div class="bar-fill" id="f-sig" style="width:94%"></div></div>
+              </div>
+              <div class="bar-wrap">
+                <div class="bar-lbl"><span>UPLINK</span><span id="b-up">67%</span></div>
+                <div class="bar-bg"><div class="bar-fill" id="f-up" style="width:67%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hud-panel">
+            <div class="hud-panel-num">LOG</div>
+            <div class="hud-panel-titulo">TERMINAL</div>
+            <div id="mini-terminal"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Barra de loading animada -->
+      <div class="hud-loading-wrap">
+        <span class="hud-loading-label">LOADING</span>
+        <div class="hud-loading-bg">
+          <div class="hud-loading-fill"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- ══════════════════════
+       NAV LATERAL DIREITA
+  ══════════════════════ -->
+  <nav id="nav">
+     <img src="imagens/logofastfurios2.png" alt="Fast and Furious" class="nav-logo" />
+
+    <button class="nav-btn active" data-page="inicio"      onclick="showPage('inicio')">INÍCIO</button>
+    <button class="nav-btn"        data-page="carros"      onclick="showPage('carros')">CARROS</button>
+    <button class="nav-btn"        data-page="personagens" onclick="showPage('personagens')">PERSONAGENS</button>
+    <button class="nav-btn"        data-page="olho"        onclick="showPage('olho')">OLHO DE DEUS</button>
+    <div class="creditos">
+    <div class="creditos-linha">DESENVOLVIDO POR</div>
+    <div class="creditos-nome">RITA.TECH</div>
+    <div class="creditos-ano">© 2026</div>
+  </div>
+</div>
+</div>
+  </nav>
+
+</div>
+
+
+<!-- Nosso arquivo de lógica -->
+<script src="script.js"></script>
+</body>
+</html>
