@@ -6,7 +6,7 @@
 
 ## 📸 Preview
 
-> *(adicione aqui um print do projeto quando subir no GitHub)*
+<img width="1916" height="827" alt="image" src="https://github.com/user-attachments/assets/7dd69662-5531-4722-a73e-349944033e1a" />
 
 ---
 
